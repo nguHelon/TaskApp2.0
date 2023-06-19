@@ -1,8 +1,11 @@
-import React from 'react'
+import { Routes, Route } from "react-router-dom"
+import { Home } from "./pages/pages";
 
 const App = () => {
   return (
-    <div className="font-bold">App</div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   )
 }
 
