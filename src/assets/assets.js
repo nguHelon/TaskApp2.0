@@ -1,5 +1,7 @@
 import home from "./home.png";
 import work1 from "./work1.png";
+import work2 from "./work2.png";
+import work3 from "./work3.png";
 import logo from "./logo.png"
 import avatar from './avatars/avatar.png'
 import avatar1 from './avatars/avatar1.jpg'
@@ -20,6 +22,8 @@ import target from './target.png'
 export {
     home,
     work1,
+    work2,
+    work3,
     logo,
     avatar,
     avatar1,

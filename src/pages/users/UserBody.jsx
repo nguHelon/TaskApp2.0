@@ -112,7 +112,7 @@ const UserBody = () => {
           <h1 className="text-2xl text-dimWhite font-bold mb-8">Meetings Schedule</h1>
           <div className="w-full h-auto flex flex-col space-y-3">
             <div className="w-full rounded-2xl p-5 bg-[#fff1d6] containerBoxShadow">
-              <span className="text-textColor mb-4">Mon, Apr 1 2023</span>
+              <span className="text-textColor2 mb-4">Mon, Apr 1 2023</span>
               <p className="Capitalize  font-bold mb-5">Colleague Reunion</p>
               <div className="w-full flex justify-around items-start">
                 <img className="h-[50px] w-[50px] rounded-full" src={avatar} alt="" />
@@ -122,7 +122,7 @@ const UserBody = () => {
               </div>
             </div>
             <div className="w-full rounded-2xl p-5 bg-[#d1e7ff] containerBoxShadow">
-              <span className="text-textColor mb-4">Mon, Apr 1 2023</span>
+              <span className="text-textColor2 mb-4">Mon, Apr 1 2023</span>
               <p className="Capitalize  font-bold mb-5">Colleague Reunion</p>
               <div className="w-full flex justify-around items-start">
                 <img className="h-[50px] w-[50px] rounded-full" src={avatar} alt="" />
@@ -132,7 +132,7 @@ const UserBody = () => {
               </div>
             </div>
             <div className="w-full rounded-2xl p-5 bg-[#ffd8da] containerBoxShadow">
-              <span className="text-textColor mb-4">Mon, Apr 1 2023</span>
+              <span className="text-textColor2 mb-4">Mon, Apr 1 2023</span>
               <p className="Capitalize  font-bold mb-5">Colleague Reunion</p>
               <div className="w-full flex justify-around items-start">
                 <img className="h-[50px] w-[50px] rounded-full" src={avatar} alt="" />
@@ -142,7 +142,7 @@ const UserBody = () => {
               </div>
             </div>
             <div className="w-full rounded-2xl p-5 bg-[#d9ffe5] containerBoxShadow">
-              <span className="text-textColor mb-4">Mon, Apr 1 2023</span>
+              <span className="text-textColor2 mb-4">Mon, Apr 1 2023</span>
               <p className="Capitalize  font-bold mb-5">Colleague Reunion</p>
               <div className="w-full flex justify-around items-start">
                 <img className="h-[50px] w-[50px] rounded-full" src={avatar} alt="" />
