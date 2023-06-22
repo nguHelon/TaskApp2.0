@@ -1,7 +1,10 @@
+import { useState } from "react"
 import { avatar10, work3 } from "../../assets/assets"
 
 
 const AddUserForm = () => {
+    
+
   return (
     <section className="w-full h-[100vh] flex justify-center items-center bg-cover bg-center">
     <div className="w-[1000px] flex items-center justify-end rounded-xl relative boxShadow2 bg-[#11182b]">
