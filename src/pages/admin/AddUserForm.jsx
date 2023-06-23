@@ -3,7 +3,8 @@ import { avatar10, work3 } from "../../assets/assets"
 
 
 const AddUserForm = () => {
-    
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <section className="w-full h-[100vh] flex justify-center items-center bg-cover bg-center">
@@ -18,11 +19,15 @@ const AddUserForm = () => {
                 <p className="text-dimGray mb-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, ipsum?</p>
                 <div className="w-full">
                     <input 
-                        className="w-full h-[30px] outline-none border border-dimGray mb-3 pl-3 py-5 text-black rounded-md" type="text" placeholder="User Name"                       
+                        className="w-full h-[30px] outline-none border border-dimGray mb-3 pl-3 py-5 text-black rounded-md" type="text" placeholder="User Name"    
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                     />
                     <input 
                         className="w-full h-[30px] outline-none border border-dimGray mb-3 pl-3 py-5 text-black rounded-md" type="password"
-                        placeholder="password"                        
+                        placeholder="password"
+                        value={password}     
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                     <p className="text-textColor2 font-bold">Select Avatar</p>
                     <div className="w-full flex flex-wrap m-5 space-x-1">
