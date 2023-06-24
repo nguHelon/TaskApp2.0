@@ -1,10 +1,24 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = [
     {
         id: 0,
-        name: "Admin",
-        password: "admin",
+        name: "Ngu Helon",
+        password: "nguhelon",
+        image: "",
+        task: {
+            inProgress: 0,
+            completd: 0,
+            onHold: 0,
+            totalTasks: 0,
+        },
+        allTasks: [],
+        meetings: []
+    },
+    {
+        id: 0,
+        name: "anthony davis",
+        password: "anthony",
         image: "",
         task: {
             inProgress: 0,
@@ -26,10 +40,21 @@ const usersSlice = createSlice({
                 state.push(action.payload)
             },
 
-            prepare(name, password, image, task, allTasks, meetings) {
+            prepare(id, name, password, image) {
                 return {
                     payload: {
-                        id: nanoid(), name, password, image, task, allTasks, meetings
+                        id,
+                        name,
+                        password,
+                        image,
+                        task: {
+                            inProgress: 0,
+                            completd: 0,
+                            onHold: 0,
+                            totalTasks: 0,
+                        },
+                        allTasks: [],
+                        meetings: []
                     }
                 }
             }
