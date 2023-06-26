@@ -33,9 +33,7 @@ const AddUserForm = () => {
     dispatch(userAdded(id, name, password, image));
 
     navigate('../adminusers');
-  }
-
-  console.log(userAdded)
+  }  
 
   return (
     <section className="w-full h-[100vh] flex justify-center items-center bg-cover bg-center">

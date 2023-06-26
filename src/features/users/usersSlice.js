@@ -5,10 +5,10 @@ const initialState = [
         id: 0,
         name: "Ngu Helon",
         password: "nguhelon",
-        image: "",
+        image: "../src/assets/avatars/avatar2.svg",
         task: {
             inProgress: 0,
-            completd: 0,
+            completed: 0,
             onHold: 0,
             totalTasks: 0,
         },
@@ -16,13 +16,13 @@ const initialState = [
         meetings: []
     },
     {
-        id: 0,
+        id: 1,
         name: "anthony davis",
         password: "anthony",
-        image: "",
+        image: "../src/assets/avatars/avatar9.jpg",
         task: {
             inProgress: 0,
-            completd: 0,
+            completed: 0,
             onHold: 0,
             totalTasks: 0,
         },
@@ -34,7 +34,7 @@ const initialState = [
 const usersSlice = createSlice({
     name: "users",
     initialState,
-    reducer: {
+    reducers: {
         userAdded: {
             reducer(state, action) {
                 state.push(action.payload)
@@ -49,7 +49,7 @@ const usersSlice = createSlice({
                         image,
                         task: {
                             inProgress: 0,
-                            completd: 0,
+                            completed: 0,
                             onHold: 0,
                             totalTasks: 0,
                         },
@@ -58,10 +58,15 @@ const usersSlice = createSlice({
                     }
                 }
             }
+        },
+        userRemoved(state, action) {
+            return state.filter((user) => user.id != action.payload)
         }
     }
 })
 
-export const { userAdded } = usersSlice.actions;
+export const allUsers = (state) => state.users;
+
+export const { userAdded, userRemoved } = usersSlice.actions;
 
 export default usersSlice.reducer;
