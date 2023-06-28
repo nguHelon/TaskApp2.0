@@ -10,17 +10,19 @@ const AddTaskForm = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const users = useSelector(allUsers);
-    const [taskInfo, setTaskInfo] = useState({name: '', description: '', taskAssignee: ''});
+    const [taskInfo, setTaskInfo] = useState({name: '', description: '', taskAssignee: '', status: 'on hold'});
     const [assignees, setAssignees] = useState(users.map((user) => {
         return { ...user, selected: false}
     }));
 
     function handleAddTask() {
-        const { name, description, taskAssignee } = taskInfo;
-        dispatch(tasksAdded(name, description, taskAssignee));
+        const { name, description, taskAssignee, status } = taskInfo;
+        dispatch(tasksAdded(name, description, taskAssignee, status));
 
         navigate('../admintasks');
     }
+
+    console.log(taskInfo)
     
   return (
     <section className="w-full h-[100vh] flex justify-center items-center bg-cover bg-center bg-no-repeat">

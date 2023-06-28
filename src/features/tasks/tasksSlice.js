@@ -5,7 +5,8 @@ const initialState = [
         id: "0",
         name: "task1",
         description: "task1 description over here",
-        taskAssignee: "some id"
+        taskAssignee: "0",
+        status: "on hold"
     }
 ]
 
@@ -18,10 +19,10 @@ const tasksSlice = createSlice({
                 state.push(action.payload)
             },
 
-            prepare(name, description, taskAssignee) {
+            prepare(name, description, taskAssignee, status) {
                 return {
                     payload: {
-                        id: nanoid(), name, description, taskAssignee
+                        id: nanoid(), name, description, taskAssignee, status
                     }
                 }
             }

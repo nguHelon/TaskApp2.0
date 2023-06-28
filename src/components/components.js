@@ -5,6 +5,7 @@ import UserInfo from "./UserInfo";
 import TaskAssignee from "./TaskAssignee";
 import TaskInfo from "./TaskInfo";
 import MeetingAttendants from "./MeetingAttendants";
+import MeetingInfo from "./MeetingInfo";
 
 export {
     AdminLogin,
@@ -14,4 +15,5 @@ export {
     TaskAssignee,
     TaskInfo,
     MeetingAttendants,
+    MeetingInfo,
 }

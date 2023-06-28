@@ -26,12 +26,16 @@ const meetingsSlice = createSlice({
                     }
                 }
             }
+        },
+
+        meetingRemoved(state, action) {
+            return state.filter((user) => user.id != action.payload);
         }
     }
 })
 
 export const allMeetings = (state) => state.meetings;
 
-export const { meetingAdded } = meetingsSlice.actions;
+export const { meetingAdded, meetingRemoved } = meetingsSlice.actions;
 
 export default meetingsSlice.reducer

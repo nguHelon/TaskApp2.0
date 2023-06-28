@@ -24,6 +24,8 @@ const AdminTasks = () => {
                         taskId={task.id}
                         name={task.name}
                         description={task.description}
+                        status={task.status}
+                        taskAssignee={task.taskAssignee}
                     />
                 })
             }           

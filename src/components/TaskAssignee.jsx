@@ -5,7 +5,7 @@ const TaskAssignee = ({ taskId, name, selected, image, setTaskInfo, setAssignees
   function handleSelection() {
     setAssignees((prevUsers) => {
         setTaskInfo((prevInfo) => {
-          return {...prevInfo, assignee: taskId}
+          return {...prevInfo, taskAssignee: taskId}
         })
         return prevUsers.map((user) => {
           return user.id == taskId ? {...user, selected: true} : {...user, selected: false};

@@ -1,9 +1,13 @@
 import { useDispatch } from "react-redux"
 import { tasksRemoved } from "../features/tasks/tasksSlice";
+import { useSelector } from "react-redux";
+import { allUsers } from "../features/users/usersSlice";
 
 
-const TaskInfo = ({taskId, name, description}) => {
+const TaskInfo = ({taskId, name, description, status, taskAssignee}) => {
   const dispatch = useDispatch();
+  const users = useSelector(allUsers);
+  const assignee = users.filter((user) => user.id == taskAssignee)[0];
 
   function handleRemoveTask(taskId) {
     dispatch(tasksRemoved(taskId));
@@ -22,8 +26,17 @@ const TaskInfo = ({taskId, name, description}) => {
                     }}                               
                 >
                     remove tasks
-                </button>                        
+                </button>
+                <button
+                    className="py-1 px-2 rounded-[60px] outline-none text-[14px] text-white border-2 border-white font-bold mr-4"
+                >
+                    {status}
+                </button>
             </div>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+            <img src={assignee.image} className="w-[50px] h-[50px] rounded-full cursor-pointer" alt="" />
+            <span className="font-bold text-dimWhite">{assignee.name.split(" ")[0]}</span>
         </div>
     </div> 
   )
