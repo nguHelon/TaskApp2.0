@@ -13,11 +13,13 @@ const AdminTasks = () => {
 
         <div className="w-full py-5 text-left mb-4">
             <h1 className="text-3xl text-dimWhite font-bold">All tasks</h1>
-            <p className="text-textColor2">You can see all the meetings below that have been planned with their descriptions. 🙂 </p>
+            <p className="text-textColor2">You can see all the tasks below that have been planned with their descriptions. 🙂 </p>
         </div>
 
         <div className="max-w-full h-auto py-5 rounded-2xl bg-[#11182b] flex items-center space-x-3 space-y-3 flex-wrap containerBoxShadow">            
-            { 
+            { tasks.length == 0 ? 
+                <p className="text-dimWhite ml-2">GO add some tasks now 🚀 in the dashboard page</p>
+                :
                 tasks.map((task) => {
                     return <TaskInfo 
                         key={task.id}
@@ -27,7 +29,7 @@ const AdminTasks = () => {
                         status={task.status}
                         taskAssignee={task.taskAssignee}
                     />
-                })
+                }) 
             }           
         </div>
 

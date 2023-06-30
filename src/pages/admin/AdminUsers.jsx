@@ -21,7 +21,9 @@ const AdminUsers = () => {
         </div>
 
         <div className="w-full h-auto space-y-5">          
-            {
+            { users.length == 0 ? 
+                <p className="text-dimWhite">No users yet. Go add some now 🚀 in the dashboard page.  </p>
+                :
                 users.map((user) => {
                     return <UserInfo 
                         key={user.id}
@@ -30,7 +32,7 @@ const AdminUsers = () => {
                         task={user.task}
                         image={user.image}
                     />
-                })
+                }) 
             }               
         </div>
 

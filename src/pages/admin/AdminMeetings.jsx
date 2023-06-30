@@ -20,7 +20,9 @@ const AdminMeetings = () => {
     <div className="w-full bg-[#11182b] rounded-2xl p-3 containerBoxShadow">
       <h1 className="text-2xl text-dimWhite font-bold mb-8">Meetings Schedule</h1>
       <div className="w-full h-auto flex space-y-3 space-x-3 flex-wrap">            
-        {
+        { meetings.length == 0 ? 
+          <p className="text-dimWhite">GO add some meetings now 🚀 in the dashboard page.</p>
+          :
           meetings.map(meeting => {
             return <MeetingInfo 
               key={meeting.id}

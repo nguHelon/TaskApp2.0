@@ -1,14 +1,6 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
-const initialState = [
-    {
-        id: 0,
-        name: "Meeting1",
-        description: "front end meeting",
-        date: "whatever date",
-        attendants: []
-    }
-]
+const initialState = [];
 
 const meetingsSlice = createSlice({
     name: "meetings",

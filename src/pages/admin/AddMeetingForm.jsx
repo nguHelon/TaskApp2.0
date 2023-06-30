@@ -22,8 +22,6 @@ const AddMeetingForm = () => {
     navigate("../adminmeetings");
   }
 
-  console.log(meetingInfo)
-
   return (
     <section className="w-full h-[100vh] flex justify-center items-center bg-cover bg-center">
             <div className="w-[1000px] flex items-center justify-end rounded-xl relative boxShadow2 bg-[#11182b]">
@@ -61,7 +59,9 @@ const AddMeetingForm = () => {
                                 }}
                             />
                             <div  className="w-full flex flex-wrap m-5 space-x-1">
-                                {
+                                { users.length == 0 ?
+                                    <p className="text-dimWhite font-bold">Go add some users first in dashboard page</p>
+                                    :
                                     attendants.map((attendant) => {
                                         return <MeetingAttendants 
                                             key={attendant.id}

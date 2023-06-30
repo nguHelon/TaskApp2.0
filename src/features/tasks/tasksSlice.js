@@ -1,14 +1,6 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit"
 
-const initialState = [
-    {
-        id: "0",
-        name: "task1",
-        description: "task1 description over here",
-        taskAssignee: "0",
-        status: "on hold"
-    }
-]
+const initialState = [];
 
 const tasksSlice = createSlice({
     name: "tasks",
