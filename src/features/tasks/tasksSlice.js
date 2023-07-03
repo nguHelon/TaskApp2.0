@@ -22,12 +22,16 @@ const tasksSlice = createSlice({
 
         tasksRemoved(state, action) {
             return state.filter((task) => task.id != action.payload);
+        },
+
+        tasksLoaded(state, action) {
+            state.concat(action.payload);
         }
     }
 })
 
 export const allTasks = (state) => state.tasks;
 
-export const { tasksAdded, tasksRemoved } = tasksSlice.actions
+export const { tasksAdded, tasksRemoved, tasksLoaded } = tasksSlice.actions
 
 export default tasksSlice.reducer

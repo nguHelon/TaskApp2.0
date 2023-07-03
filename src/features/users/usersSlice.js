@@ -30,14 +30,19 @@ const usersSlice = createSlice({
                 }
             }
         },
+
         userRemoved(state, action) {
             return state.filter((user) => user.id != action.payload)
+        },
+
+        usersLoaded(state, action) {
+            state.concat(action.payload);
         }
     }
 })
 
 export const allUsers = (state) => state.users;
 
-export const { userAdded, userRemoved } = usersSlice.actions;
+export const { userAdded, userRemoved, usersLoaded } = usersSlice.actions;
 
 export default usersSlice.reducer;

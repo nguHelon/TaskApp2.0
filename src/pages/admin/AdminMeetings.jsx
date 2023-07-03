@@ -1,10 +1,17 @@
 import { useSelector } from "react-redux"
 import { allMeetings } from "../../features/meetings/meetingsSlice"
 import { MeetingInfo } from "../../components/components";
+import { useEffect } from "react";
 
 
 const AdminMeetings = () => {
   const meetings = useSelector(allMeetings);
+
+  // useEffect(() => {
+  //   const appData = localStorage.getItem("store") == null ? { users: [], tasks: [], meetings: [] } : JSON.parse(localStorage.getItem("store"));
+
+  //   localStorage.setItem("store", JSON.stringify({...appData, meetings: meetings}));
+  // }, [meetings])
 
   return (
     <div className="w-full min-h-[100vh]">

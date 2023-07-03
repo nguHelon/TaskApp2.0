@@ -1,10 +1,19 @@
 import { useSelector } from "react-redux"
 import { allUsers } from "../../features/users/usersSlice"
 import { UserInfo } from "../../components/components";
+import { useEffect } from "react";
 
 
 const AdminUsers = () => {
   const users = useSelector(allUsers);
+
+//   useEffect(() => {
+//     const appData = JSON.parse(localStorage.getItem("store"));
+    
+//     if ( users.length != 0 ) {
+//         localStorage.setItem("store", JSON.stringify({...appData, users: users}));
+//     }
+//   }, [users])
 
   return (
     <div className="w-full min-h-[100vh]">

@@ -1,9 +1,16 @@
 import { TaskInfo } from "../../components/components";
 import { useSelector } from "react-redux";
 import { allTasks } from "../../features/tasks/tasksSlice";
+import { useEffect } from "react";
 
 const AdminTasks = () => {
-  const tasks = useSelector(allTasks)
+  const tasks = useSelector(allTasks);
+
+//   useEffect(() => {
+//     const appData = localStorage.getItem("store") == null ? { users: [], tasks: [], meetings: [] } : JSON.parse(localStorage.getItem("store"));
+
+//     localStorage.setItem("store", JSON.stringify({...appData, tasks: tasks}));
+//   }, [tasks])
 
   return (
     <div className="w-full min-h-[100vh]">
